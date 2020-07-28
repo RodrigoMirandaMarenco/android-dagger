@@ -6,7 +6,7 @@ import dagger.Component
 /**
  * Created by rodrigomiranda on 7/28/20.
  */
-@Component
+@Component(modules = [StorageModule::class])
 interface AppComponent {
     fun inject(activity: RegistrationActivity)
 }
