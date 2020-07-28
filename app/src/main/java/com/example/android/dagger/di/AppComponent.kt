@@ -11,7 +11,7 @@ import javax.inject.Singleton
  * Created by rodrigomiranda on 7/28/20.
  */
 @Singleton
-@Component(modules = [StorageModule::class])
+@Component(modules = [StorageModule::class, AppSubComponents::class])
 interface AppComponent {
 
     @Component.Factory
