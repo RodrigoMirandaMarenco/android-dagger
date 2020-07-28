@@ -1,5 +1,6 @@
 package com.example.android.dagger.registration
 
+import com.example.android.dagger.di.ActivityScope
 import com.example.android.dagger.registration.enterdetails.EnterDetailsFragment
 import com.example.android.dagger.registration.termsandconditions.TermsAndConditionsFragment
 import dagger.Component
@@ -8,6 +9,7 @@ import dagger.Subcomponent
 /**
  * Created by rodrigomiranda on 7/28/20.
  */
+@ActivityScope
 @Subcomponent
 interface RegistrationComponent {
 
