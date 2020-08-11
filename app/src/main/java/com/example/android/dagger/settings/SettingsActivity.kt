@@ -31,7 +31,10 @@ class SettingsActivity : AppCompatActivity() {
     lateinit var settingsViewModel: SettingsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        (application as MyApplication).appComponent.inject(this)
+        val userManager = (application as MyApplication).appComponent.userManager()
+        userManager.userComponent?.let {
+            it.inject(this)
+        }
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
