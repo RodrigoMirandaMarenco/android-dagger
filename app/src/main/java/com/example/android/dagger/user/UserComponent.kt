@@ -7,6 +7,7 @@ import dagger.Subcomponent
 /**
  * Created by rodrigomiranda on 8/11/20.
  */
+@LoggedUserScope
 @Subcomponent
 interface UserComponent {
 
