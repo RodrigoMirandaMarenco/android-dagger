@@ -1,59 +1,29 @@
 # Using Dagger in your Android app
 
-This folder contains the source code for the "Using Dagger in your Android app" codelab.
-
-The codelab is built in multiple GitHub branches:
-* `master` is the codelab's starting point.
-* `1_registration_main`, `2_subcomponents`, and `3_dagger_app` are intermediate
-steps towards the solution.
-* `solution` contains the solution to this codelab.
+Please follow the instructions in 
+[Dagger Code lab](https://codelabs.developers.google.com/codelabs/android-dagger/#0)
+to complete the Android Dagger code lab. 
 
 
-# Introduction
-Dependency injection is a technique widely used in programming and well suited
-to Android development. By following the principles of dependency injection, you
-lay the groundwork for a good app architecture.
-
-Implementing dependency injection provides you with the following advantages:
-* Reusability of code.
-* Ease of refactoring.
-* Ease of testing.
+[Original Repository](https://github.com/googlecodelabs/android-dagger)
 
 
-# Pre-requisites
-* Experience with Kotlin syntax.
-* You understand Dependency Injection and know what the benefits
-of using Dagger in your Android app are.
 
-# Getting Started
-1. Install Android Studio, if you don't already have it.
-2. Download the sample.
-3. Import the sample into Android Studio.
-4. Build and run the sample.
+# Dagger Pros
+1. One of Google's recommended tools (tons of support and online resources)
+2. Great performance.
+3. A high percentage of 10K+ installs apps in the Play Store use Dagger.
+4. A high number of potential staffing gigs with clients.
 
-
-# Comparison between different branches
-* Step 1 - `master` to `1_registration_main` ([Comparison](https://github.com/googlecodelabs/android-dagger/compare/master...1_registration_main))
-* Step 2 - `1_registration_main` to `2_subcomponents` ([Comparison](https://github.com/googlecodelabs/android-dagger/compare/1_registration_main...2_subcomponents))
-* Step 3 - `2_subcomponents` to `3_dagger_app` ([Comparison](https://github.com/googlecodelabs/android-dagger/compare/2_subcomponents...3_dagger_app))
-* Step 4 - `3_dagger_app` to `solution` ([Comparison](https://github.com/googlecodelabs/android-dagger/compare/3_dagger_app...solution))
-* [Full codelab comparison](https://github.com/googlecodelabs/android-dagger/compare/master...solution)
+# Dagger Tips
+1. @Binds != data binding
+2. @Inject: Used to tell Dagger how to instantiate a class and ALSO used to tell Dagger to inject a Field into a class.
+3. When using Activities, inject Dagger in the Activity's onCreate method before calling super.onCreate to avoid issues with fragment restoration.
+4. A Fragment injects Dagger in the onAttach method after calling super
+5. Dagger-injected fields cannot be private
+6. Subcomponents are components that inherit and extend the object graph of a parent component
+7. Scope annotations should be named after the lifecycle they adhere to.
+8. @Module != Gradle Module
 
 
-# License
 
-```
-Copyright 2019 Google LLC
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    https://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
