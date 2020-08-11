@@ -16,4 +16,11 @@
 
 package com.example.android.dagger
 
-class MyTestApplication : MyApplication()
+import com.example.android.dagger.di.DaggerTestAppComponent
+import com.example.android.dagger.di.TestAppComponent
+
+class MyTestApplication : MyApplication() {
+
+    override fun initializeComponent(): TestAppComponent =
+        DaggerTestAppComponent.create()
+}
